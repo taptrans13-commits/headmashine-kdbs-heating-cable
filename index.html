@@ -1,104 +1,345 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>КДБС — ООО «ТЕХНОПРОГРЕСС»</title>
-  <meta name="description" content="Кабель КДБС для прогрева бетона от ООО «ТЕХНОПРОГРЕСС»: запрос цены и срока, поставка по РФ, документы с НДС.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>КДБС-40 для прогрева бетона | ООО «ТЕХНОПРОГРЕСС»</title>
+  <meta name="description" content="Кабель КДБС-40 для прогрева монолитного бетона: расчет комплектов, цены по длинам, PDF-презентация и паспорт. Поставка от ООО «ТЕХНОПРОГРЕСС».">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://taptrans13-commits.github.io/headmashine-kdbs-heating-cable/">
-  <meta property="og:title" content="КДБС — ООО «ТЕХНОПРОГРЕСС»">
-  <meta property="og:description" content="Кабель КДБС для прогрева бетона: запрос цены и срока, поставка по РФ, документы с НДС.">
+  <link rel="preload" href="assets/kdbs-card-main.jpg" as="image">
+  <link rel="stylesheet" href="styles.css">
+  <meta property="og:title" content="КДБС-40 для прогрева бетона">
+  <meta property="og:description" content="Премиальный сайт ООО «ТЕХНОПРОГРЕСС»: каталог КДБС, расчетчик комплектов, документы PDF.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://taptrans13-commits.github.io/headmashine-kdbs-heating-cable/">
-  <style>
-    body{margin:0;font-family:Inter,Arial,sans-serif;color:#0f172a;background:#f8fafc}
-    .wrap{max-width:1120px;margin:0 auto;padding:0 16px}
-    .top{position:sticky;top:0;background:#fff;border-bottom:1px solid #e2e8f0;z-index:10}
-    .topin{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
-    .nav a{margin-left:14px;color:#334155;text-decoration:none}
-    .btn{background:#2563eb;color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;display:inline-block}
-    h1,h2{margin:0 0 12px} section{padding:36px 0}
-    .hero{padding:20px 0 36px}.hero img{width:100%;border-radius:14px;border:1px solid #cbd5e1}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
-    .card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:16px}
-    .muted{color:#64748b}
-    .faq details{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:12px;margin-bottom:8px}
-    footer{background:#0f172a;color:#cbd5e1;padding:24px 0;margin-top:30px}
-    .fine{font-size:13px;color:#94a3b8}
-  </style>
+  <meta property="og:image" content="https://taptrans13-commits.github.io/headmashine-kdbs-heating-cable/assets/kdbs-card-main.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ООО «ТЕХНОПРОГРЕСС»",
+    "url": "https://taptrans13-commits.github.io/headmashine-kdbs-heating-cable/",
+    "email": "info@power-cab.ru",
+    "telephone": "+7 342 207-10-20",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Пермь",
+      "streetAddress": "ул. Ново-Гайвинская, д. 102, офис 22",
+      "addressCountry": "RU"
+    }
+  }
+  </script>
 </head>
 <body>
-  <header class="top">
-    <div class="wrap topin">
-      <b>ООО «ТЕХНОПРОГРЕСС»</b>
-      <nav class="nav">
-        <a href="#catalog">Каталог</a><a href="#about">О компании</a><a href="#faq">FAQ</a><a href="#contacts">Контакты</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="ООО ТЕХНОПРОГРЕСС">
+        <img src="assets/logo-technoprogress.jpg" alt="">
+        <span>ООО «ТЕХНОПРОГРЕСС»</span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#calculator">Расчет</a>
+        <a href="#catalog">Каталог</a>
+        <a href="#documents">Документы</a>
+        <a href="#contacts">Контакты</a>
       </nav>
+      <a class="header-phone" href="tel:+73422071020">+7 342 207-10-20</a>
     </div>
   </header>
 
-  <main class="wrap">
+  <main id="top">
     <section class="hero">
-      <img src="assets/banners/hero-kdbs.svg" alt="КДБС"/>
-      <h1 style="margin-top:16px">Кабель КДБС для прогрева бетона</h1>
-      <p class="muted">Быстрый расчёт коммерческого предложения, поставка по РФ, документы с НДС.</p>
-      <a class="btn" href="#contacts">Запросить цену и срок</a>
-    </section>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">КДБС-40 / прогрев монолитного бетона</p>
+          <h1>Кабель КДБС-40</h1>
+          <p class="lead">Для зимнего бетонирования и прогрева монолитных конструкций. Комплекты 3-145 м, расчет мощности и коммерческое предложение под объект.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#calculator">Рассчитать комплект</a>
+            <a class="btn secondary" href="documents/kdbs-presentation.pdf" target="_blank" rel="noopener">Открыть презентацию</a>
+          </div>
+          <dl class="hero-metrics" aria-label="Ключевые параметры">
+            <div>
+              <dt>40 Вт/м</dt>
+              <dd>линейная мощность</dd>
+            </div>
+            <div>
+              <dt>220-240 В</dt>
+              <dd>питание секции</dd>
+            </div>
+            <div>
+              <dt>IP67</dt>
+              <dd>степень защиты</dd>
+            </div>
+          </dl>
+        </div>
 
-    <section id="catalog">
-      <h2>Каталог КДБС</h2>
-      <div class="grid">
-        <div class="card"><img src="assets/kdbs-card-main.jpg" style="width:100%;border-radius:8px"><h3>КДБС 20 м</h3><p>Для локального прогрева монолита.</p></div>
-        <div class="card"><img src="assets/kdbs-card-main.jpg" style="width:100%;border-radius:8px"><h3>КДБС 35/53 м</h3><p>Под стандартные строительные задачи.</p></div>
-        <div class="card"><img src="assets/kdbs-card-main.jpg" style="width:100%;border-radius:8px"><h3>КДБС 78 м и выше</h3><p>Для крупных объёмов и промобъектов.</p></div>
+        <div class="hero-visual reveal" aria-label="Визуал кабеля КДБС">
+          <div class="visual-frame">
+            <img class="product-photo" src="assets/kdbs-card-main.jpg" alt="Комплект кабеля КДБС">
+            <svg class="heat-map" viewBox="0 0 640 260" aria-hidden="true">
+              <path class="cable-path" d="M32 190 C120 42 220 292 318 142 S492 14 608 184"></path>
+              <path class="heat-line heat-one" d="M44 174 C130 68 218 244 318 126 S500 42 596 168"></path>
+              <path class="heat-line heat-two" d="M50 206 C145 98 224 270 330 160 S502 82 592 204"></path>
+              <g class="nodes">
+                <circle cx="76" cy="142" r="6"></circle>
+                <circle cx="196" cy="206" r="6"></circle>
+                <circle cx="322" cy="142" r="6"></circle>
+                <circle cx="450" cy="92" r="6"></circle>
+                <circle cx="568" cy="158" r="6"></circle>
+              </g>
+            </svg>
+            <div class="visual-note">
+              <span>Раскладка от 70 мм между нитками</span>
+              <strong>под бетон</strong>
+            </div>
+          </div>
+        </div>
       </div>
-      <p class="fine">Итоговая цена и срок подтверждаются в КП на дату запроса.</p>
     </section>
 
-    <section>
-      <img src="assets/banners/use-cases.svg" alt="Сферы применения" style="width:100%;border-radius:14px;border:1px solid #cbd5e1"/>
-    </section>
-
-    <section id="about">
-      <h2>О компании</h2>
-      <div class="card">
-        <p>ООО «ТЕХНОПРОГРЕСС» поставляет кабельно-проводниковую и электротехническую продукцию для B2B-клиентов. Работаем через понятный процесс: заявка, КП, подтверждение условий, счёт, отгрузка, закрывающие документы.</p>
-        <p>География: Пермь, Екатеринбург, Москва, Санкт-Петербург, Самара и другие регионы РФ.</p>
+    <section class="band specs-band">
+      <div class="container spec-grid">
+        <article class="spec-item reveal">
+          <span>01</span>
+          <h2>Для монолита и железобетона</h2>
+          <p>Секция предназначена для прокладки в бетон и прогрева конструкций в холодное время года.</p>
+        </article>
+        <article class="spec-item reveal">
+          <span>02</span>
+          <h2>Готовые длины</h2>
+          <p>В каталоге есть комплекты 3, 5, 10, 20, 35, 53, 78, 97 и 145 метров.</p>
+        </article>
+        <article class="spec-item reveal">
+          <span>03</span>
+          <h2>Документы в PDF</h2>
+          <p>На сайте доступны презентация и паспорт КДБС для просмотра и скачивания.</p>
+        </article>
       </div>
     </section>
 
-    <section id="faq" class="faq">
-      <h2>FAQ</h2>
-      <details><summary>Как быстро даёте КП?</summary><p>Обычно в день обращения после уточнения позиции, объёма и города отгрузки.</p></details>
-      <details><summary>Цена на сайте финальная?</summary><p>На сайте ориентир. Финальные условия фиксируются в коммерческом предложении и счёте.</p></details>
-      <details><summary>Можно купить из наличия?</summary><p>Да, подтверждаем наличие на момент запроса и резервируем после согласования.</p></details>
-      <details><summary>Работаете с НДС?</summary><p>Да, документы предоставляются в стандартном формате для B2B.</p></details>
-      <details><summary>Какие данные нужны для счёта?</summary><p>Название, ИНН, КПП, юр. адрес и e-mail для документов.</p></details>
-      <details><summary>Делаете доставку?</summary><p>Да, условия доставки согласуются в КП отдельно.</p></details>
+    <section class="section" id="calculator">
+      <div class="container section-head reveal">
+        <p class="eyebrow">Калькулятор</p>
+        <h2>Подбор комплектов по длине или площади</h2>
+        <p>Расчет ориентировочный. Финальные условия подтверждаются в коммерческом предложении и счете.</p>
+      </div>
+
+      <div class="container calculator-layout">
+        <div class="calculator-panel reveal">
+          <div class="mode-tabs" role="tablist" aria-label="Способ расчета">
+            <button class="mode-tab active" type="button" data-mode="area">Площадь и шаг</button>
+            <button class="mode-tab" type="button" data-mode="length">Готовая длина</button>
+          </div>
+
+          <div class="calc-fields" data-panel="area">
+            <label>
+              <span>Площадь прогрева, м²</span>
+              <input id="areaInput" type="number" min="1" max="1000" step="1" value="36">
+            </label>
+            <label>
+              <span>Шаг укладки, см</span>
+              <input id="stepInput" type="range" min="7" max="30" step="1" value="15">
+              <strong id="stepValue">15 см</strong>
+            </label>
+            <label>
+              <span>Запас на раскладку, %</span>
+              <input id="reserveInput" type="number" min="0" max="30" step="1" value="8">
+            </label>
+          </div>
+
+          <div class="calc-fields hidden" data-panel="length">
+            <label>
+              <span>Нужная длина кабеля, м</span>
+              <input id="lengthInput" type="number" min="1" max="2000" step="1" value="260">
+            </label>
+          </div>
+
+          <div class="calc-summary" aria-live="polite">
+            <div>
+              <span>Расчетная длина</span>
+              <strong id="requiredLength">0 м</strong>
+            </div>
+            <div>
+              <span>Подобрано кабеля</span>
+              <strong id="selectedLength">0 м</strong>
+            </div>
+            <div>
+              <span>Ориентир по мощности</span>
+              <strong id="totalPower">0 кВт</strong>
+            </div>
+            <div>
+              <span>Ориентир по цене</span>
+              <strong id="totalPrice">0 ₽</strong>
+            </div>
+          </div>
+        </div>
+
+        <aside class="result-panel reveal">
+          <h3>Рекомендованная комплектация</h3>
+          <div id="kitList" class="kit-list"></div>
+          <div class="result-actions">
+            <a class="btn primary" id="quoteLink" href="mailto:info@power-cab.ru">Запросить КП</a>
+            <a class="btn secondary" id="whatsappLink" href="https://wa.me/79922121369" target="_blank" rel="noopener">Написать в WhatsApp</a>
+          </div>
+          <p class="fine-print">Калькулятор использует длины и цены каталога. Для объекта с нестандартной геометрией лучше приложить схему или ведомость.</p>
+        </aside>
+      </div>
     </section>
 
-    <section>
-      <img src="assets/banners/cta.svg" alt="CTA" style="width:100%;border-radius:14px;border:1px solid #cbd5e1"/>
+    <section class="section catalog-section" id="catalog">
+      <div class="container section-head reveal">
+        <p class="eyebrow">Каталог</p>
+        <h2>Комплекты КДБС-40</h2>
+        <p>Цены указаны с НДС как ориентир на дату публикации. Наличие и срок отгрузки подтверждаются перед счетом.</p>
+      </div>
+      <div class="container">
+        <div class="product-grid" id="productGrid" aria-label="Карточки КДБС"></div>
+        <div class="table-wrap reveal">
+          <table>
+            <caption>Прайс-лист КДБС-40</caption>
+            <thead>
+              <tr>
+                <th>Позиция</th>
+                <th>Длина</th>
+                <th>Комплект</th>
+                <th>Наличие</th>
+                <th>Цена</th>
+              </tr>
+            </thead>
+            <tbody id="productRows"></tbody>
+          </table>
+        </div>
+      </div>
     </section>
 
-    <section id="contacts">
-      <h2>Контакты</h2>
-      <div class="card">
-        <p><b>Телефон:</b> +7 342 207-10-20</p>
-        <p><b>Мессенджеры:</b> +7 992 212-13-69</p>
-        <p><b>Email:</b> info@power-cab.ru</p>
-        <p><b>Адрес:</b> г. Пермь, ул. Ново-Гайвинская, д. 102, офис 22</p>
+    <section class="band process-band">
+      <div class="container process-grid">
+        <div class="process-copy reveal">
+          <p class="eyebrow">Работа с заявкой</p>
+          <h2>От расчета до отгрузки</h2>
+          <p>ООО «ТЕХНОПРОГРЕСС» работает с B2B-заявками: уточняем задачу, подбираем комплектность, резервируем наличие и готовим закрывающие документы.</p>
+        </div>
+        <ol class="process-list reveal">
+          <li><span>Заявка</span><p>Длина, площадь, город, желаемый срок.</p></li>
+          <li><span>КП</span><p>Подбор комплектов, цена, срок, доставка.</p></li>
+          <li><span>Счет</span><p>Реквизиты, НДС, согласованные условия.</p></li>
+          <li><span>Отгрузка</span><p>Самовывоз или транспортная компания.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section documents-section" id="documents">
+      <div class="container section-head reveal">
+        <p class="eyebrow">Документы</p>
+        <h2>PDF для просмотра и скачивания</h2>
+        <p>Откройте файл в браузере или скачайте его для согласования внутри проекта.</p>
+      </div>
+
+      <div class="container docs-grid">
+        <article class="doc-card reveal">
+          <div>
+            <span class="doc-type">PDF</span>
+            <h3>Презентация КДБС</h3>
+            <p>Краткое описание продукта, применения и условий поставки.</p>
+          </div>
+          <iframe title="Презентация КДБС" src="documents/kdbs-presentation.pdf"></iframe>
+          <a class="btn secondary" href="documents/kdbs-presentation.pdf" download>Скачать презентацию</a>
+        </article>
+
+        <article class="doc-card reveal">
+          <div>
+            <span class="doc-type">PDF</span>
+            <h3>Паспорт КДБС</h3>
+            <p>Руководство по эксплуатации с техническими характеристиками и требованиями монтажа.</p>
+          </div>
+          <iframe title="Паспорт КДБС" src="documents/kdbs-passport.pdf"></iframe>
+          <a class="btn secondary" href="documents/kdbs-passport.pdf" download>Скачать паспорт</a>
+        </article>
+
+        <article class="doc-request reveal">
+          <span class="doc-type">Запрос</span>
+          <h3>Дополнительные подтверждающие документы</h3>
+          <p>Если для закупки нужен сертификат, декларация или документ на конкретную поставку, запросите его до оплаты счета.</p>
+          <a class="btn primary" href="mailto:info@power-cab.ru?subject=%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B%20%D0%9A%D0%94%D0%91%D0%A1">Запросить документы</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section technical-section">
+      <div class="container technical-grid">
+        <div class="technical-copy reveal">
+          <p class="eyebrow">Технические ориентиры</p>
+          <h2>Что важно учесть на объекте</h2>
+          <p>КДБС применяется только в бетоне. Перед подключением проверяют марку секции, сопротивление и условия монтажа.</p>
+        </div>
+        <div class="technical-list reveal">
+          <div><strong>-30 °C</strong><span>минимальная температура монтажа</span></div>
+          <div><strong>70 мм</strong><span>минимальное расстояние между нитками</span></div>
+          <div><strong>35 мм</strong><span>минимальный радиус однократного изгиба</span></div>
+          <div><strong>+70 °C</strong><span>максимальная рабочая температура</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container section-head reveal">
+        <p class="eyebrow">FAQ</p>
+        <h2>Частые вопросы</h2>
+      </div>
+      <div class="container faq-list">
+        <details class="reveal">
+          <summary>КДБС можно включать в бухте?</summary>
+          <p>Нет. Нагревательные секции нельзя включать неразмотанными, даже на короткое время.</p>
+        </details>
+        <details class="reveal">
+          <summary>Кабель можно прокладывать открыто?</summary>
+          <p>Нет. Секция предназначена для прокладки в бетон и не предназначена для открытой установки.</p>
+        </details>
+        <details class="reveal">
+          <summary>Какой шаг укладки использовать в калькуляторе?</summary>
+          <p>Минимальное расстояние между нитками по паспорту - 70 мм. Точный шаг выбирают по проекту и теплотехнической задаче.</p>
+        </details>
+        <details class="reveal">
+          <summary>Цена на сайте фиксированная?</summary>
+          <p>Цена является ориентиром. Итоговые условия, наличие и срок фиксируются в коммерческом предложении и счете.</p>
+        </details>
+        <details class="reveal">
+          <summary>Какие данные нужны для счета?</summary>
+          <p>Нужны реквизиты компании, позиция, количество, город отгрузки и контакт для согласования документов.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contacts">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">Связаться</p>
+          <h2>Запросите КП на КДБС</h2>
+          <p>Пришлите длину, площадь или схему раскладки. В ответ подготовим комплектацию, цену, срок и документы.</p>
+        </div>
+        <div class="contact-panel reveal">
+          <a href="tel:+73422071020">+7 342 207-10-20</a>
+          <a href="https://wa.me/79922121369" target="_blank" rel="noopener">+7 992 212-13-69</a>
+          <a href="mailto:info@power-cab.ru">info@power-cab.ru</a>
+          <p>г. Пермь, ул. Ново-Гайвинская, д. 102, офис 22</p>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="wrap">
+  <footer class="site-footer">
+    <div class="container footer-inner">
       <p>© ООО «ТЕХНОПРОГРЕСС»</p>
-      <p class="fine">Информация на сайте не является публичной офертой (ст. 437 ГК РФ). Условия, цены, наличие и сроки подтверждаются в индивидуальном КП и счёте.</p>
-      <p class="fine"><a href="privacy.html" style="color:#93c5fd">Политика обработки персональных данных</a> · <a href="legal.html" style="color:#93c5fd">Юридическая информация</a></p>
+      <p>Информация не является публичной офертой. Цена, наличие и сроки подтверждаются индивидуально.</p>
+      <nav aria-label="Юридические ссылки">
+        <a href="privacy.html">Политика ПДн</a>
+        <a href="legal.html">Юридическая информация</a>
+      </nav>
     </div>
   </footer>
+
+  <script src="app.js" defer></script>
 </body>
 </html>
