@@ -1,17 +1,12 @@
-# KDBS Heating Cable Landing
+# КДБС — ООО «ТЕХНОПРОГРЕСС»
 
-Static landing page prepared for GitHub Pages.
+Статический сайт для продажи кабеля КДБС для прогрева бетона:
 
-## Publish on GitHub Pages
+- каталог КДБС по длинам;
+- запрос цены и срока;
+- блок о компании;
+- FAQ;
+- контакты;
+- юридическая информация и политика обработки персональных данных.
 
-1. Create a public GitHub repository, for example `kdbs-heating-cable`.
-2. Upload these files to the repository root:
-   - `index.html`
-   - `robots.txt`
-   - `sitemap.xml`
-   - `.nojekyll`
-3. In GitHub, open Settings -> Pages.
-4. Set Source to "Deploy from a branch".
-5. Select branch `main` and folder `/root`.
-6. After GitHub publishes the site, submit `https://taptrans13-commits.github.io/headmashine-kdbs-heating-cable/sitemap.xml` to Google Search Console and Yandex Webmaster.
-
+Публикация выполняется через GitHub Pages workflow из ветки `main`.

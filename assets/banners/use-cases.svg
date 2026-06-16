@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <rect width="1200" height="600" fill="#0f172a"/>
+  <rect x="60" y="70" width="320" height="460" rx="16" fill="#1e293b"/>
+  <rect x="440" y="70" width="320" height="460" rx="16" fill="#1e293b"/>
+  <rect x="820" y="70" width="320" height="460" rx="16" fill="#1e293b"/>
+  <text x="120" y="140" fill="#93c5fd" font-size="30" font-family="Arial">Стройка</text>
+  <text x="500" y="140" fill="#93c5fd" font-size="30" font-family="Arial">Монолит</text>
+  <text x="880" y="140" fill="#93c5fd" font-size="30" font-family="Arial">Промобъекты</text>
+  <text x="120" y="200" fill="#fff" font-size="22" font-family="Arial">Прогрев бетона</text>
+  <text x="500" y="200" fill="#fff" font-size="22" font-family="Arial">Стабильные сроки</text>
+  <text x="880" y="200" fill="#fff" font-size="22" font-family="Arial">Надёжная отгрузка</text>
+</svg>
