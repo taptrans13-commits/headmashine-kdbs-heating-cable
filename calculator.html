@@ -42,6 +42,25 @@
       </div>
     </section>
 
+    <section class="compact-section">
+      <div class="container split-grid">
+        <div class="split-copy reveal">
+          <p class="eyebrow">Методика подбора</p>
+          <h2>Расчет нужен для заявки, а не заменяет проект прогрева</h2>
+          <p>Калькулятор подбирает ближайшие стандартные секции КДБС-40 по требуемой длине. Он помогает быстро оценить закупку, мощность и ток, а финальную схему раскладки выбирают по объекту.</p>
+          <ul class="check-list">
+            <li><strong>По площади</strong><span>задайте площадь прогрева, шаг между нитками и запас на выводы или обходы.</span></li>
+            <li><strong>По готовой длине</strong><span>если проект уже посчитал метраж, сразу введите нужную длину кабеля.</span></li>
+            <li><strong>По мощности</strong><span>каждый метр КДБС-40 дает ориентировочно 40 Вт нагрузки.</span></li>
+          </ul>
+        </div>
+        <figure class="media-card reveal">
+          <img src="assets/concrete-layout.svg" alt="Схема раскладки кабеля КДБС в бетонной плите">
+          <figcaption><strong>Схема раскладки</strong><span>Минимальное расстояние между нитками по паспорту - 70 мм; рабочий шаг задается проектом.</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section class="section">
       <div class="container calculator-layout">
         <div class="calculator-panel reveal">
@@ -77,6 +96,7 @@
             <div><span>Расчетная длина</span><strong id="requiredLength">0 м</strong></div>
             <div><span>Подобрано кабеля</span><strong id="selectedLength">0 м</strong></div>
             <div><span>Ориентир по мощности</span><strong id="totalPower">0 кВт</strong></div>
+            <div><span>Ориентир по току</span><strong id="totalCurrent">0 А</strong></div>
             <div><span>Ориентир по цене</span><strong id="totalPrice">0 ₽</strong></div>
           </div>
         </div>
@@ -94,10 +114,28 @@
     </section>
 
     <section class="compact-section">
+      <div class="container formula-grid">
+        <article class="formula-card reveal">
+          <span>Длина</span>
+          <h2>Площадь / шаг</h2>
+          <code>L = S / шаг x (1 + запас)</code>
+          <p>Шаг в формуле используется в метрах. Например, 15 см вводится как 0,15 м.</p>
+        </article>
+        <article class="formula-card reveal">
+          <span>Мощность</span>
+          <h2>40 Вт на метр</h2>
+          <code>P = L x 40 Вт</code>
+          <p>Суммарная мощность помогает оценить нагрузку на линию и распределение секций.</p>
+        </article>
+        <article class="formula-card reveal">
+          <span>Ток</span>
+          <h2>Оценка при 220 В</h2>
+          <code>I = P / 220 В</code>
+          <p>Итоговое подключение должен проверять квалифицированный специалист.</p>
+        </article>
+      </div>
       <div class="container body-copy reveal">
-        <h2>Как считается длина КДБС</h2>
-        <p>В режиме «Площадь и шаг» длина считается как площадь, деленная на шаг укладки в метрах, с учетом заданного запаса. В режиме «Готовая длина» калькулятор сразу подбирает секции под указанную длину.</p>
-        <div class="seo-note">Минимальное расстояние между нитками нагревательного кабеля по паспорту - 70 мм. Точный шаг укладки выбирают по проекту, температуре и требованиям к набору прочности бетона.</div>
+        <div class="seo-note">Минимальное расстояние между нитками нагревательного кабеля по паспорту - 70 мм. Точный шаг укладки выбирают по проекту, температуре, толщине конструкции и требованиям к набору прочности бетона.</div>
       </div>
     </section>
   </main>

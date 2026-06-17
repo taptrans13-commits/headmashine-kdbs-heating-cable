@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Сечение нагревательного кабеля КДБС</title>
+  <desc id="desc">Техническая иллюстрация оболочки, нагревательных жил и установочного шнура.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#18212b"/>
+      <stop offset="1" stop-color="#334252"/>
+    </linearGradient>
+    <linearGradient id="jacket" x1="0" x2="1">
+      <stop offset="0" stop-color="#d94120"/>
+      <stop offset="0.55" stop-color="#f0713e"/>
+      <stop offset="1" stop-color="#9f260f"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" x2="1">
+      <stop offset="0" stop-color="#e7edf1"/>
+      <stop offset="0.45" stop-color="#8c97a1"/>
+      <stop offset="1" stop-color="#f9fbfc"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#071018" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <path d="M0 645C220 568 347 619 526 545c167-69 291-241 674-206v421H0z" fill="#f5f7f2" opacity=".08"/>
+  <g stroke="#f0713e" stroke-opacity=".22" stroke-width="2">
+    <path d="M120 106h960M80 196h1040M46 286h1108M80 376h1040M120 466h960"/>
+  </g>
+  <g filter="url(#shadow)" transform="rotate(-8 585 395)">
+    <path d="M70 360h590c56 0 102 46 102 102s-46 102-102 102H70z" fill="url(#jacket)"/>
+    <path d="M310 360h350c56 0 102 46 102 102s-46 102-102 102H310z" fill="#222a33"/>
+    <path d="M458 379h255c47 0 86 38 86 85s-39 85-86 85H458z" fill="#101820"/>
+    <g stroke="#45515c" stroke-width="13" opacity=".9">
+      <path d="M473 391l260 147M507 386l260 147M541 382l260 147M575 378l260 147"/>
+    </g>
+    <path d="M656 416h236" stroke="#f0713e" stroke-width="24" stroke-linecap="round"/>
+    <path d="M656 506h236" stroke="#f0713e" stroke-width="24" stroke-linecap="round"/>
+    <path d="M876 416h114" stroke="url(#metal)" stroke-width="18" stroke-linecap="round"/>
+    <path d="M876 506h114" stroke="url(#metal)" stroke-width="18" stroke-linecap="round"/>
+    <circle cx="458" cy="462" r="83" fill="none" stroke="#f0713e" stroke-width="20"/>
+    <circle cx="458" cy="462" r="45" fill="#f5f7f2" opacity=".95"/>
+  </g>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="78" y="96" fill="#fff" font-size="42" font-weight="800">Конструкция КДБС-40</text>
+    <text x="78" y="144" fill="#c8d1dc" font-size="20">Морозостойкая секция для прокладки в бетон</text>
+    <g fill="#fff" font-size="18" font-weight="800">
+      <text x="828" y="184">40 Вт/м</text>
+      <text x="828" y="238">≈220 В</text>
+      <text x="828" y="292">шнур 2 м</text>
+    </g>
+    <g fill="#c8d1dc" font-size="15">
+      <text x="920" y="184">линейная мощность</text>
+      <text x="920" y="238">питание секции</text>
+      <text x="920" y="292">установочный шнур</text>
+    </g>
+  </g>
+</svg>

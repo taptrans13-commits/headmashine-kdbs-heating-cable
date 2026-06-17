@@ -11,6 +11,7 @@
   --teal: #008b8b;
   --green: #2d7c4f;
   --shadow: 0 18px 60px rgba(17, 24, 39, 0.14);
+  --deep-shadow: 0 30px 90px rgba(17, 24, 39, 0.22);
   --radius: 8px;
 }
 
@@ -131,7 +132,9 @@ input {
   align-items: center;
   padding: 42px 0 34px;
   background:
-    linear-gradient(90deg, rgba(36, 49, 63, 0.97) 0%, rgba(36, 49, 63, 0.92) 50%, rgba(246, 247, 242, 0.98) 50%, rgba(246, 247, 242, 1) 100%);
+    radial-gradient(circle at 78% 18%, rgba(242, 184, 75, 0.18), transparent 26%),
+    radial-gradient(circle at 10% 86%, rgba(0, 139, 139, 0.18), transparent 28%),
+    linear-gradient(120deg, rgba(21, 25, 31, 0.99), rgba(36, 49, 63, 0.94) 58%, rgba(236, 239, 232, 0.96) 58%, rgba(246, 247, 242, 1) 100%);
 }
 
 .hero::after {
@@ -293,7 +296,7 @@ h3 {
   border-radius: var(--radius);
   background: var(--white);
   border: 1px solid rgba(21, 25, 31, 0.12);
-  box-shadow: var(--shadow);
+  box-shadow: var(--deep-shadow);
 }
 
 .product-photo {
@@ -369,6 +372,40 @@ h3 {
   padding: 72px 0;
 }
 
+.premium-strip {
+  padding: 22px 0;
+  color: var(--white);
+  background: #10151b;
+}
+
+.premium-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.premium-strip-grid div {
+  display: grid;
+  gap: 4px;
+  min-height: 96px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.premium-strip-grid strong {
+  color: #ffb38b;
+  font-size: 24px;
+}
+
+.premium-strip-grid span {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+}
+
 .specs-band {
   background: var(--white);
   border-bottom: 1px solid var(--line);
@@ -416,6 +453,10 @@ h3 {
   padding: 90px 0;
 }
 
+.section.alt {
+  background: #ecefe8;
+}
+
 .section-head {
   display: grid;
   gap: 14px;
@@ -426,6 +467,151 @@ h3 {
 .section-head p {
   margin: 0;
   font-size: 18px;
+}
+
+.showcase-grid,
+.split-grid,
+.catalog-intro,
+.doc-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(340px, 1.1fr);
+  gap: 32px;
+  align-items: center;
+}
+
+.showcase-copy,
+.split-copy {
+  display: grid;
+  gap: 18px;
+}
+
+.showcase-copy p,
+.split-copy p,
+.catalog-intro p,
+.doc-detail-grid p {
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.media-card {
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.media-card img {
+  width: 100%;
+  min-height: 360px;
+  object-fit: cover;
+}
+
+.media-card figcaption {
+  display: grid;
+  gap: 6px;
+  padding: 18px;
+  color: var(--muted);
+}
+
+.media-card strong {
+  color: var(--steel);
+}
+
+.fact-list,
+.check-list,
+.step-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fact-list li,
+.check-list li,
+.step-list li {
+  display: grid;
+  gap: 4px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.fact-list strong,
+.check-list strong,
+.step-list strong {
+  color: var(--steel);
+}
+
+.fact-list span,
+.check-list span,
+.step-list span {
+  color: var(--muted);
+}
+
+.warning-grid,
+.formula-grid,
+.use-case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.warning-card,
+.formula-card,
+.use-case-card,
+.document-stack article {
+  display: grid;
+  gap: 10px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: 0 12px 34px rgba(17, 24, 39, 0.07);
+}
+
+.warning-card {
+  border-color: rgba(227, 75, 39, 0.28);
+}
+
+.warning-card span,
+.formula-card span,
+.use-case-card span,
+.document-stack span {
+  color: var(--heat);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.warning-card p,
+.formula-card p,
+.use-case-card p,
+.document-stack p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.formula-card code {
+  display: inline-block;
+  padding: 8px 10px;
+  border-radius: 6px;
+  color: var(--steel);
+  background: #eef1f4;
+  font-weight: 800;
+  white-space: normal;
+}
+
+.formula-grid + .body-copy {
+  margin-top: 18px;
+}
+
+.document-stack {
+  display: grid;
+  gap: 14px;
 }
 
 .calculator-layout {
@@ -521,7 +707,7 @@ input[type="range"] {
 
 .calc-summary {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 1px;
   margin-top: 24px;
   overflow: hidden;
@@ -619,11 +805,53 @@ input[type="range"] {
   background: #fbfcfd;
 }
 
+.product-code {
+  color: var(--heat);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 .product-card img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 6px;
+}
+
+.product-specs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--line);
+}
+
+.product-specs div {
+  display: grid;
+  gap: 3px;
+  min-height: 64px;
+  padding: 10px;
+  background: var(--white);
+}
+
+.product-specs dt,
+.product-specs dd {
+  margin: 0;
+}
+
+.product-specs dt {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 760;
+}
+
+.product-specs dd {
+  color: var(--steel);
+  font-weight: 900;
 }
 
 .product-card .meta {
@@ -666,7 +894,7 @@ input[type="range"] {
 
 table {
   width: 100%;
-  min-width: 760px;
+  min-width: 1040px;
   border-collapse: collapse;
 }
 
@@ -683,6 +911,13 @@ td {
   text-align: left;
   border-bottom: 1px solid var(--line);
   white-space: nowrap;
+}
+
+td span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 13px;
 }
 
 th {
@@ -1149,7 +1384,11 @@ details p {
   .calculator-layout,
   .process-grid,
   .technical-grid,
-  .contact-grid {
+  .contact-grid,
+  .showcase-grid,
+  .split-grid,
+  .catalog-intro,
+  .doc-detail-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1168,8 +1407,15 @@ details p {
   .docs-grid,
   .link-grid,
   .content-grid,
-  .contact-card-grid {
+  .contact-card-grid,
+  .warning-grid,
+  .formula-grid,
+  .use-case-grid {
     grid-template-columns: 1fr;
+  }
+
+  .premium-strip-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .calc-summary {
@@ -1244,7 +1490,11 @@ details p {
   .calc-fields,
   .calc-summary,
   .process-list,
-  .technical-list {
+  .technical-list,
+  .premium-strip-grid,
+  .warning-grid,
+  .formula-grid,
+  .use-case-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1279,6 +1529,14 @@ details p {
 
   .visual-note {
     display: none;
+  }
+
+  .media-card img {
+    min-height: 240px;
+  }
+
+  .formula-card code {
+    font-size: 13px;
   }
 
   .section,

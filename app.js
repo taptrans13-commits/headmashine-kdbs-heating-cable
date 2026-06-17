@@ -1,14 +1,22 @@
 const products = [
-  { name: "КДБС-40, 3 м", length: 3, price: 2035, stock: "под заказ", set: "кабель + вилка" },
-  { name: "КДБС-40, 5 м", length: 5, price: 2235, stock: "в наличии", stockQty: 23, set: "кабель + вилка" },
-  { name: "КДБС-40, 10 м", length: 10, price: 2725, stock: "в наличии", stockQty: 15, set: "кабель + вилка" },
-  { name: "КДБС-40, 20 м", length: 20, price: 3500, stock: "в наличии", stockQty: 26, set: "кабель + вилка" },
-  { name: "КДБС-40, 35 м", length: 35, price: 5440, stock: "в наличии", stockQty: 35, set: "кабель + вилка" },
-  { name: "КДБС-40, 53 м", length: 53, price: 7250, stock: "в наличии", stockQty: 17, set: "кабель + вилка" },
-  { name: "КДБС-40, 78 м", length: 78, price: 9255, stock: "в наличии", stockQty: 55, set: "кабель + вилка" },
-  { name: "КДБС-40, 97 м", length: 97, price: 11800, stock: "в наличии", stockQty: 29, set: "кабель без вилки" },
-  { name: "КДБС-40, 145 м", length: 145, price: 23460, stock: "в наличии", stockQty: 35, set: "кабель без вилки" }
-];
+  { name: "КДБС-40, 3 м", fullName: "40КДБС-3", length: 3, price: 2035, stock: "под заказ", set: "кабель + вилка" },
+  { name: "КДБС-40, 5 м", fullName: "40КДБС-5", length: 5, price: 2235, stock: "в наличии", stockQty: 23, set: "кабель + вилка" },
+  { name: "КДБС-40, 10 м", fullName: "40КДБС-10", length: 10, price: 2725, stock: "в наличии", stockQty: 15, set: "кабель + вилка" },
+  { name: "КДБС-40, 20 м", fullName: "40КДБС-20", length: 20, price: 3500, stock: "в наличии", stockQty: 26, set: "кабель + вилка" },
+  { name: "КДБС-40, 35 м", fullName: "40КДБС-35", length: 35, price: 5440, stock: "в наличии", stockQty: 35, set: "кабель + вилка" },
+  { name: "КДБС-40, 53 м", fullName: "40КДБС-53", length: 53, price: 7250, stock: "в наличии", stockQty: 17, set: "кабель + вилка" },
+  { name: "КДБС-40, 78 м", fullName: "40КДБС-78", length: 78, price: 9255, stock: "в наличии", stockQty: 55, set: "кабель + вилка" },
+  { name: "КДБС-40, 97 м", fullName: "40КДБС-97", length: 97, price: 11800, stock: "в наличии", stockQty: 29, set: "кабель без вилки" },
+  { name: "КДБС-40, 145 м", fullName: "40КДБС-145", length: 145, price: 23460, stock: "в наличии", stockQty: 35, set: "кабель без вилки" }
+].map((item) => ({
+  ...item,
+  powerW: item.length * 40,
+  voltage: "≈220 В",
+  supplyCord: 2,
+  heatRadius: 15,
+  material: "морозостойкий",
+  purpose: "для зимнего прогрева бетона"
+}));
 
 const rub = new Intl.NumberFormat("ru-RU", {
   style: "currency",
@@ -38,6 +46,7 @@ const els = {
   requiredLength: document.querySelector("#requiredLength"),
   selectedLength: document.querySelector("#selectedLength"),
   totalPower: document.querySelector("#totalPower"),
+  totalCurrent: document.querySelector("#totalCurrent"),
   totalPrice: document.querySelector("#totalPrice"),
   kitList: document.querySelector("#kitList"),
   quoteLink: document.querySelector("#quoteLink"),
@@ -45,19 +54,27 @@ const els = {
 };
 
 function renderCatalog() {
-  const featured = products.filter((item) => [20, 35, 53, 78, 145].includes(item.length));
+  const featured = products.filter((item) => [10, 20, 35, 53, 78, 97].includes(item.length));
 
   if (els.productGrid) {
     els.productGrid.innerHTML = featured.map((item) => `
       <article class="product-card reveal">
         <img src="assets/kdbs-card-main.jpg" alt="${item.name}">
         <div>
+          <span class="product-code">${item.fullName}</span>
           <h3>${item.name}</h3>
           <p class="price">${rub.format(item.price)}</p>
         </div>
+        <dl class="product-specs">
+          <div><dt>Длина</dt><dd>${item.length} м</dd></div>
+          <div><dt>Мощность</dt><dd>${item.powerW} Вт</dd></div>
+          <div><dt>Питание</dt><dd>${item.voltage}</dd></div>
+          <div><dt>Шнур</dt><dd>${item.supplyCord} м</dd></div>
+        </dl>
         <div class="meta">
           <span class="pill ${item.stock === "в наличии" ? "stock" : "order"}">${stockLabel(item)}</span>
           <span class="pill">${item.set}</span>
+          <span class="pill">${item.material}</span>
         </div>
       </article>
     `).join("");
@@ -66,8 +83,12 @@ function renderCatalog() {
   if (els.productRows) {
     els.productRows.innerHTML = products.map((item) => `
       <tr>
-        <td><strong>${item.name}</strong></td>
+        <td><strong>${item.fullName}</strong><span>${item.name}</span></td>
         <td>${item.length} м</td>
+        <td>${item.powerW} Вт</td>
+        <td>${item.voltage}</td>
+        <td>${item.supplyCord} м</td>
+        <td>${item.heatRadius} см</td>
         <td>${item.set}</td>
         <td>${stockLabel(item)}</td>
         <td><strong>${rub.format(item.price)}</strong></td>
@@ -168,6 +189,9 @@ function updateCalculator() {
   els.requiredLength.textContent = `${number.format(targetLength)} м`;
   els.selectedLength.textContent = `${number.format(kit.length)} м`;
   els.totalPower.textContent = `${number.format(powerKw)} кВт`;
+  if (els.totalCurrent) {
+    els.totalCurrent.textContent = `${number.format(currentA)} А`;
+  }
   els.totalPrice.textContent = rub.format(kit.price);
 
   els.kitList.innerHTML = groups.map((item) => `
