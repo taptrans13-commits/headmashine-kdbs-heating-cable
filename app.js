@@ -47,29 +47,33 @@ const els = {
 function renderCatalog() {
   const featured = products.filter((item) => [20, 35, 53, 78, 145].includes(item.length));
 
-  els.productGrid.innerHTML = featured.map((item) => `
-    <article class="product-card reveal">
-      <img src="assets/kdbs-card-main.jpg" alt="${item.name}">
-      <div>
-        <h3>${item.name}</h3>
-        <p class="price">${rub.format(item.price)}</p>
-      </div>
-      <div class="meta">
-        <span class="pill ${item.stock === "в наличии" ? "stock" : "order"}">${stockLabel(item)}</span>
-        <span class="pill">${item.set}</span>
-      </div>
-    </article>
-  `).join("");
+  if (els.productGrid) {
+    els.productGrid.innerHTML = featured.map((item) => `
+      <article class="product-card reveal">
+        <img src="assets/kdbs-card-main.jpg" alt="${item.name}">
+        <div>
+          <h3>${item.name}</h3>
+          <p class="price">${rub.format(item.price)}</p>
+        </div>
+        <div class="meta">
+          <span class="pill ${item.stock === "в наличии" ? "stock" : "order"}">${stockLabel(item)}</span>
+          <span class="pill">${item.set}</span>
+        </div>
+      </article>
+    `).join("");
+  }
 
-  els.productRows.innerHTML = products.map((item) => `
-    <tr>
-      <td><strong>${item.name}</strong></td>
-      <td>${item.length} м</td>
-      <td>${item.set}</td>
-      <td>${stockLabel(item)}</td>
-      <td><strong>${rub.format(item.price)}</strong></td>
-    </tr>
-  `).join("");
+  if (els.productRows) {
+    els.productRows.innerHTML = products.map((item) => `
+      <tr>
+        <td><strong>${item.name}</strong></td>
+        <td>${item.length} м</td>
+        <td>${item.set}</td>
+        <td>${stockLabel(item)}</td>
+        <td><strong>${rub.format(item.price)}</strong></td>
+      </tr>
+    `).join("");
+  }
 }
 
 function stockLabel(item) {
@@ -149,6 +153,10 @@ function groupKit(items) {
 }
 
 function updateCalculator() {
+  if (!els.requiredLength || !els.selectedLength || !els.kitList) {
+    return;
+  }
+
   els.stepValue.textContent = `${els.stepInput.value} см`;
 
   const targetLength = getTargetLength();
@@ -193,8 +201,8 @@ function setMode(mode) {
   els.modeTabs.forEach((tab) => {
     tab.classList.toggle("active", tab.dataset.mode === mode);
   });
-  els.areaPanel.classList.toggle("hidden", mode !== "area");
-  els.lengthPanel.classList.toggle("hidden", mode !== "length");
+  els.areaPanel?.classList.toggle("hidden", mode !== "area");
+  els.lengthPanel?.classList.toggle("hidden", mode !== "length");
   updateCalculator();
 }
 
@@ -230,6 +238,6 @@ els.modeTabs.forEach((tab) => {
   tab.addEventListener("click", () => setMode(tab.dataset.mode));
 });
 
-[els.areaInput, els.stepInput, els.reserveInput, els.lengthInput].forEach((input) => {
+[els.areaInput, els.stepInput, els.reserveInput, els.lengthInput].filter(Boolean).forEach((input) => {
   input.addEventListener("input", updateCalculator);
 });

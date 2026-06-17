@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Калькулятор КДБС-40 для прогрева бетона | Расчет длины и мощности</title>
+  <meta name="description" content="Онлайн-калькулятор КДБС-40: расчет длины кабеля по площади и шагу укладки, подбор комплектов, ориентир по мощности, току и цене.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://taptrans13-commits.github.io/headmashine-kdbs-heating-cable/calculator.html">
+  <link rel="stylesheet" href="styles.css">
+  <meta property="og:title" content="Калькулятор КДБС-40">
+  <meta property="og:description" content="Расчет длины, мощности и комплектов КДБС-40 для прогрева бетона.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://taptrans13-commits.github.io/headmashine-kdbs-heating-cable/calculator.html">
+  <meta property="og:image" content="https://taptrans13-commits.github.io/headmashine-kdbs-heating-cable/assets/kdbs-card-main.jpg">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="ООО ТЕХНОПРОГРЕСС">
+        <img src="assets/logo-technoprogress.jpg" alt="">
+        <span>ООО «ТЕХНОПРОГРЕСС»</span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="catalog.html">Каталог</a>
+        <a href="calculator.html">Калькулятор</a>
+        <a href="documents.html">Документы</a>
+        <a href="application.html">Монтаж</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+      <a class="header-phone" href="tel:+73422071020">+7 342 207-10-20</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container reveal">
+        <div class="breadcrumbs"><a href="index.html">Главная</a><span>/</span><span>Калькулятор</span></div>
+        <p class="eyebrow">Расчет КДБС</p>
+        <h1>Калькулятор КДБС-40 по площади и длине</h1>
+        <p class="lead">Подберите ближайшую комплектацию, посмотрите ориентировочную мощность и сформируйте запрос КП.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container calculator-layout">
+        <div class="calculator-panel reveal">
+          <div class="mode-tabs" role="tablist" aria-label="Способ расчета">
+            <button class="mode-tab active" type="button" data-mode="area">Площадь и шаг</button>
+            <button class="mode-tab" type="button" data-mode="length">Готовая длина</button>
+          </div>
+
+          <div class="calc-fields" data-panel="area">
+            <label>
+              <span>Площадь прогрева, м²</span>
+              <input id="areaInput" type="number" min="1" max="1000" step="1" value="36">
+            </label>
+            <label>
+              <span>Шаг укладки, см</span>
+              <input id="stepInput" type="range" min="7" max="30" step="1" value="15">
+              <strong id="stepValue">15 см</strong>
+            </label>
+            <label>
+              <span>Запас на раскладку, %</span>
+              <input id="reserveInput" type="number" min="0" max="30" step="1" value="8">
+            </label>
+          </div>
+
+          <div class="calc-fields hidden" data-panel="length">
+            <label>
+              <span>Нужная длина кабеля, м</span>
+              <input id="lengthInput" type="number" min="1" max="2000" step="1" value="260">
+            </label>
+          </div>
+
+          <div class="calc-summary" aria-live="polite">
+            <div><span>Расчетная длина</span><strong id="requiredLength">0 м</strong></div>
+            <div><span>Подобрано кабеля</span><strong id="selectedLength">0 м</strong></div>
+            <div><span>Ориентир по мощности</span><strong id="totalPower">0 кВт</strong></div>
+            <div><span>Ориентир по цене</span><strong id="totalPrice">0 ₽</strong></div>
+          </div>
+        </div>
+
+        <aside class="result-panel reveal">
+          <h3>Рекомендованная комплектация</h3>
+          <div id="kitList" class="kit-list"></div>
+          <div class="result-actions">
+            <a class="btn primary" id="quoteLink" href="mailto:info@power-cab.ru">Запросить КП</a>
+            <a class="btn secondary" id="whatsappLink" href="https://wa.me/79922121369" target="_blank" rel="noopener">Написать в WhatsApp</a>
+          </div>
+          <p class="fine-print">Расчет носит справочный характер. Для сложной геометрии объекта приложите схему раскладки.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="compact-section">
+      <div class="container body-copy reveal">
+        <h2>Как считается длина КДБС</h2>
+        <p>В режиме «Площадь и шаг» длина считается как площадь, деленная на шаг укладки в метрах, с учетом заданного запаса. В режиме «Готовая длина» калькулятор сразу подбирает секции под указанную длину.</p>
+        <div class="seo-note">Минимальное расстояние между нитками нагревательного кабеля по паспорту - 70 мм. Точный шаг укладки выбирают по проекту, температуре и требованиям к набору прочности бетона.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© ООО «ТЕХНОПРОГРЕСС»</p>
+      <p>Информация не является публичной офертой. Цена, наличие и сроки подтверждаются индивидуально.</p>
+      <nav aria-label="Разделы сайта и юридические ссылки">
+        <a href="catalog.html">Каталог</a>
+        <a href="calculator.html">Калькулятор</a>
+        <a href="documents.html">Документы</a>
+        <a href="application.html">Монтаж</a>
+        <a href="delivery.html">Поставка</a>
+        <a href="faq.html">FAQ</a>
+        <a href="privacy.html">Политика ПДн</a>
+        <a href="legal.html">Юридическая информация</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="app.js" defer></script>
+</body>
+</html>
