@@ -37,7 +37,7 @@
     <text x="78" y="142" fill="#5d6875" font-size="20">Минимальный шаг между нитками - 70 мм, подключение после проверки секции</text>
     <g transform="translate(832 552)">
       <rect width="276" height="112" rx="8" fill="#24313f"/>
-      <text x="24" y="44" fill="#fff" font-size="22" font-weight="900">15 см</text>
+      <text x="24" y="44" fill="#fff" font-size="22" font-weight="900">20 см</text>
       <text x="24" y="78" fill="#c8d1dc" font-size="16">радиус обогрева по карточке товара</text>
     </g>
   </g>
