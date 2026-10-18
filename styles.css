@@ -1586,8 +1586,8 @@ details p {
 .header-phone:hover{color:#fff;background:#781512}
 .hero{background:linear-gradient(105deg,#17191b 0%,#292422 62%,#5e3327 100%);min-height:650px}
 .hero::after{background:repeating-linear-gradient(110deg,#aa2119 0 24px,#211c18 24px 48px);height:9px}
-.hero-visual .visual-frame{box-shadow:0 28px 80px #0008;border:1px solid #d1a68b}
-.hero-visual .product-photo{opacity:.78;mix-blend-mode:screen}
+.hero-visual .visual-frame{box-shadow:0 28px 80px #0008;border:1px solid #d1a68b;background:#0d1013}
+.hero-visual .product-photo{display:block;opacity:1;mix-blend-mode:normal;object-fit:contain}
 .hero-visual .visual-frame::before{content:"";display:block;position:absolute;inset:0;background:linear-gradient(145deg,transparent 40%,#a8161633);z-index:1;pointer-events:none}
 .hero-visual .heat-map,.hero-visual .visual-note{display:none}
 .hero-copy h1{font-size:clamp(48px,6vw,82px);letter-spacing:-.035em}
