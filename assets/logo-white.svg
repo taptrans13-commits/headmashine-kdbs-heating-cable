@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 170" role="img" aria-labelledby="title desc">
+  <title id="title">ТЕХНОПРОГРЕСС</title>
+  <desc id="desc">Светлый индустриальный логотип ТЕХНОПРОГРЕСС</desc>
+  <rect x="2" y="2" width="916" height="166" fill="none" stroke="#efe4cd" stroke-width="4"/>
+  <rect width="154" height="170" fill="#a81616"/>
+  <circle cx="77" cy="72" r="49" fill="#1c1916"/>
+  <circle cx="77" cy="72" r="35" fill="none" stroke="#efe4cd" stroke-width="5"/>
+  <g fill="#efe4cd">
+    <circle cx="77" cy="48" r="10"/>
+    <circle cx="53" cy="72" r="10"/>
+    <circle cx="101" cy="72" r="10"/>
+    <circle cx="77" cy="96" r="10"/>
+  </g>
+  <path d="M18 139H136" stroke="#efe4cd" stroke-width="5"/>
+  <path d="M18 151H93" stroke="#1c1916" stroke-width="5"/>
+  <text x="178" y="88" fill="#efe4cd" font-family="Impact, 'Arial Narrow', 'Roboto Condensed', Arial, sans-serif" font-size="76" font-weight="900" letter-spacing="-1">ТЕХНОПРОГРЕСС</text>
+  <rect x="178" y="103" width="720" height="8" fill="#a81616"/>
+  <text x="178" y="145" fill="#efe4cd" font-family="'Arial Narrow', 'Roboto Condensed', Arial, sans-serif" font-size="23" font-weight="800" letter-spacing="2">КАБЕЛЬ • ЭЛЕКТРОТЕХНИКА • ПОСТАВКИ</text>
+</svg>
