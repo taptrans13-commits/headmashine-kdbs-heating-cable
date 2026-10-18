@@ -58,7 +58,7 @@ function renderCatalog() {
   if (els.productGrid) {
     els.productGrid.innerHTML = featured.map((item) => `
       <article class="product-card reveal">
-        <img src="assets/banners/supply.svg" alt="Комплект ${item.name}">
+        <img src="assets/kdbs-card-main.jpg" loading="lazy" alt="Комплект ${item.name}">
         <div>
           <span class="product-code">${item.fullName}</span>
           <h3>${item.name}</h3>
