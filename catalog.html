@@ -31,13 +31,14 @@
     }
   }
   </script>
+  <link rel="icon" href="assets/logo-black.svg" type="image/svg+xml">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="ООО ТЕХНОПРОГРЕСС">
-        <img src="assets/logo-technoprogress.jpg" alt="">
-        <span>ООО «ТЕХНОПРОГРЕСС»</span>
+        <img src="assets/logo-black.svg" alt="">
+        
       </a>
       <nav class="nav" aria-label="Основная навигация">
         <a href="catalog.html">Каталог</a>
@@ -46,7 +47,7 @@
         <a href="application.html">Монтаж</a>
         <a href="contacts.html">Контакты</a>
       </nav>
-      <a class="header-phone" href="tel:+73422071020">+7 342 207-10-20</a>
+      <a class="header-phone" href="tel:+79922121369">+7 992 212-13-69</a>
     </div>
   </header>
 
@@ -68,7 +69,7 @@
       <div class="container premium-strip-grid reveal">
         <div><strong>9 позиций</strong><span>от 40КДБС-3 до 40КДБС-145</span></div>
         <div><strong>2 м</strong><span>длина шнура питания по каталогу</span></div>
-        <div><strong>15 см</strong><span>радиус прогрева секции</span></div>
+        <div><strong>20 см</strong><span>типовой шаг укладки секции</span></div>
         <div><strong>с НДС</strong><span>цены указаны как ориентир для КП</span></div>
       </div>
     </section>
@@ -96,9 +97,10 @@
       <div class="container section-head reveal">
         <p class="eyebrow">Прайс</p>
         <h2>Длины и цены КДБС-40</h2>
-        <p>Цена, наличие и срок фиксируются в счете после подтверждения заявки.</p>
+        <p>Цены из текущего каталога приведены как ориентир; подтвердим стоимость, наличие и срок в счёте.</p>
       </div>
       <div class="container">
+        <a class="supply-banner" href="contacts.html"><img src="assets/banners/supply.svg" alt="Подбор секций от 3 до 145 метров"></a>
         <div class="product-grid" id="productGrid" aria-label="Карточки КДБС"></div>
         <div class="table-wrap reveal">
           <table>
@@ -110,7 +112,7 @@
                 <th>Мощность</th>
                 <th>Питание</th>
                 <th>Шнур</th>
-                <th>Радиус</th>
+                <th>Шаг*</th>
                 <th>Комплект</th>
                 <th>Наличие</th>
                 <th>Цена</th>
@@ -118,6 +120,7 @@
             </thead>
             <tbody id="productRows"></tbody>
           </table>
+          <p class="fine-print">*20 см — типовой шаг для предварительной оценки; окончательную схему определяет проект. Минимальное расстояние по паспорту — 70 мм.</p>
         </div>
       </div>
     </section>
@@ -145,9 +148,9 @@
           <p>В каталожных позициях материал указан как морозостойкий для зимнего прогрева.</p>
         </article>
         <article class="content-card reveal">
-          <span>15 см</span>
-          <h3>Радиус прогрева</h3>
-          <p>Этот параметр помогает предварительно оценить раскладку кабеля по зоне бетонирования.</p>
+          <span>20 см</span>
+          <h3>Типовой шаг укладки</h3>
+          <p>Базовый шаг для расчёта; окончательная схема определяется проектом.</p>
         </article>
         <article class="content-card reveal">
           <span>КП</span>
@@ -173,7 +176,9 @@
         <a href="legal.html">Юридическая информация</a>
       </nav>
     </div>
+    <p class="legal-links"><a href="privacy.html">Персональные данные</a> · <a href="consent.html">Согласие</a> · <a href="cookies.html">Файлы cookie</a> · <a href="legal.html">Условия поставки</a></p>
   </footer>
   <script src="app.js" defer></script>
+  <script src="consent.js" defer></script>
 </body>
 </html>

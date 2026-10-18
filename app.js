@@ -1,19 +1,18 @@
 const products = [
-  { name: "КДБС-40, 3 м", fullName: "40КДБС-3", length: 3, price: 2035, stock: "под заказ", set: "кабель + вилка" },
-  { name: "КДБС-40, 5 м", fullName: "40КДБС-5", length: 5, price: 2235, stock: "в наличии", stockQty: 23, set: "кабель + вилка" },
-  { name: "КДБС-40, 10 м", fullName: "40КДБС-10", length: 10, price: 2725, stock: "в наличии", stockQty: 15, set: "кабель + вилка" },
-  { name: "КДБС-40, 20 м", fullName: "40КДБС-20", length: 20, price: 3500, stock: "в наличии", stockQty: 26, set: "кабель + вилка" },
-  { name: "КДБС-40, 35 м", fullName: "40КДБС-35", length: 35, price: 5440, stock: "в наличии", stockQty: 35, set: "кабель + вилка" },
-  { name: "КДБС-40, 53 м", fullName: "40КДБС-53", length: 53, price: 7250, stock: "в наличии", stockQty: 17, set: "кабель + вилка" },
-  { name: "КДБС-40, 78 м", fullName: "40КДБС-78", length: 78, price: 9255, stock: "в наличии", stockQty: 55, set: "кабель + вилка" },
-  { name: "КДБС-40, 97 м", fullName: "40КДБС-97", length: 97, price: 11800, stock: "в наличии", stockQty: 29, set: "кабель без вилки" },
-  { name: "КДБС-40, 145 м", fullName: "40КДБС-145", length: 145, price: 23460, stock: "в наличии", stockQty: 35, set: "кабель без вилки" }
+  { name: "КДБС-40, 3 м", fullName: "40КДБС-3", length: 3, price: 2035, set: "кабель + вилка" },
+  { name: "КДБС-40, 5 м", fullName: "40КДБС-5", length: 5, price: 2235, set: "кабель + вилка" },
+  { name: "КДБС-40, 10 м", fullName: "40КДБС-10", length: 10, price: 2725, set: "кабель + вилка" },
+  { name: "КДБС-40, 20 м", fullName: "40КДБС-20", length: 20, price: 3500, set: "кабель + вилка" },
+  { name: "КДБС-40, 35 м", fullName: "40КДБС-35", length: 35, price: 5440, set: "кабель + вилка" },
+  { name: "КДБС-40, 53 м", fullName: "40КДБС-53", length: 53, price: 7250, set: "кабель + вилка" },
+  { name: "КДБС-40, 78 м", fullName: "40КДБС-78", length: 78, price: 9255, set: "кабель + вилка" },
+  { name: "КДБС-40, 97 м", fullName: "40КДБС-97", length: 97, price: 11800, set: "кабель без вилки" },
+  { name: "КДБС-40, 145 м", fullName: "40КДБС-145", length: 145, price: 23460, set: "кабель без вилки" }
 ].map((item) => ({
   ...item,
   powerW: item.length * 40,
   voltage: "≈220 В",
   supplyCord: 2,
-  heatRadius: 15,
   material: "морозостойкий",
   purpose: "для зимнего прогрева бетона"
 }));
@@ -54,12 +53,12 @@ const els = {
 };
 
 function renderCatalog() {
-  const featured = products.filter((item) => [10, 20, 35, 53, 78, 97].includes(item.length));
+  const featured = products;
 
   if (els.productGrid) {
     els.productGrid.innerHTML = featured.map((item) => `
       <article class="product-card reveal">
-        <img src="assets/kdbs-card-main.jpg" alt="${item.name}">
+        <img src="assets/banners/supply.svg" alt="Комплект ${item.name}">
         <div>
           <span class="product-code">${item.fullName}</span>
           <h3>${item.name}</h3>
@@ -72,9 +71,8 @@ function renderCatalog() {
           <div><dt>Шнур</dt><dd>${item.supplyCord} м</dd></div>
         </dl>
         <div class="meta">
-          <span class="pill ${item.stock === "в наличии" ? "stock" : "order"}">${stockLabel(item)}</span>
           <span class="pill">${item.set}</span>
-          <span class="pill">${item.material}</span>
+          <a class="pill product-ask" href="mailto:head-s@yandex.ru?subject=${encodeURIComponent("КП " + item.fullName)}">Запросить ${item.length} м →</a>
         </div>
       </article>
     `).join("");
@@ -88,21 +86,16 @@ function renderCatalog() {
         <td>${item.powerW} Вт</td>
         <td>${item.voltage}</td>
         <td>${item.supplyCord} м</td>
-        <td>${item.heatRadius} см</td>
+        <td>20 см*</td>
         <td>${item.set}</td>
-        <td>${stockLabel(item)}</td>
+        <td>Уточнить</td>
         <td><strong>${rub.format(item.price)}</strong></td>
       </tr>
     `).join("");
   }
 }
 
-function stockLabel(item) {
-  if (item.stockQty) {
-    return `${item.stock}: ${item.stockQty} шт.`;
-  }
-  return item.stock;
-}
+function stockLabel() { return "Наличие уточняйте"; }
 
 function getTargetLength() {
   if (state.mode === "length") {
@@ -178,7 +171,7 @@ function updateCalculator() {
     return;
   }
 
-  els.stepValue.textContent = `${els.stepInput.value} см`;
+  if (els.stepValue) els.stepValue.textContent = `${els.stepInput.value} см`;
 
   const targetLength = getTargetLength();
   const kit = solveKit(targetLength);
@@ -216,7 +209,7 @@ function updateCalculator() {
     `Ориентир по цене: ${rub.format(kit.price)}`
   ].join("\n");
 
-  els.quoteLink.href = `mailto:info@power-cab.ru?subject=${encodeURIComponent("КП на КДБС")}&body=${encodeURIComponent(body)}`;
+  els.quoteLink.href = `mailto:head-s@yandex.ru?subject=${encodeURIComponent("КП на КДБС")}&body=${encodeURIComponent(body)}`;
   els.whatsappLink.href = `https://wa.me/79922121369?text=${encodeURIComponent(body)}`;
 }
 
@@ -237,6 +230,7 @@ function clamp(value, min, max) {
 
 function setupReveal() {
   const items = document.querySelectorAll(".reveal");
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { items.forEach((item) => item.classList.add("visible")); return; }
   if (!("IntersectionObserver" in window)) {
     items.forEach((item) => item.classList.add("visible"));
     return;
