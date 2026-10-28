@@ -15,6 +15,38 @@
   --radius: 14px;
 }
 
+.form-status {
+  min-height: 1.5em;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.not-found {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  padding: 72px 0;
+}
+
+.not-found-card {
+  max-width: 760px;
+  padding: clamp(32px, 7vw, 72px);
+  border: 1px solid var(--line);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.not-found-code {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--heat);
+  font-size: clamp(3.5rem, 12vw, 8rem);
+  font-weight: 800;
+  line-height: 0.85;
+  letter-spacing: -0.06em;
+}
+
 
 * {
   box-sizing: border-box;
@@ -1101,7 +1133,7 @@ details p {
   color: var(--white);
   background:
     linear-gradient(135deg, rgba(21, 25, 31, 0.92), rgba(36, 49, 63, 0.86)),
-    url("assets/kdbs-card-main.jpg") center / cover;
+    url("assets/kdbs-card-main.webp") center / cover;
 }
 
 .contact-grid {
@@ -1164,7 +1196,7 @@ details p {
   color: var(--white);
   background:
     linear-gradient(135deg, rgba(21, 25, 31, 0.95), rgba(36, 49, 63, 0.88)),
-    url("assets/kdbs-card-main.jpg") center / cover;
+    url("assets/kdbs-card-main.webp") center / cover;
 }
 
 .page-hero::after {

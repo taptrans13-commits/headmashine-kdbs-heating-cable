@@ -2,4 +2,12 @@
 
 Статический многостраничный сайт для GitHub Pages: главная, каталог, калькулятор комплектов, документы, монтаж, поставка, контакты и FAQ.
 
-Публикация: https://taptrans13-commits.github.io/headmashine-kdbs-heating-cable/
+Проверенная публикация GitHub Pages: https://taptrans13-commits.github.io/headmashine-kdbs-heating-cable/
+
+## Проверка перед публикацией
+
+```bash
+npm run check
+```
+
+Команда проверяет JavaScript, локальные ссылки и ресурсы, метатеги основных страниц, canonical, JSON-LD и обработчик формы заявки. В репозитории также есть конфигурация `vercel.json` для независимого HTTPS-развёртывания и будущего подключения собственного домена.

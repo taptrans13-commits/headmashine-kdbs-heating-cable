@@ -58,7 +58,7 @@ function renderCatalog() {
   if (els.productGrid) {
     els.productGrid.innerHTML = featured.map((item) => `
       <article class="product-card reveal">
-        <img src="assets/kdbs-card-main.jpg" loading="lazy" alt="Комплект ${item.name}">
+        <img src="assets/kdbs-card-main.webp" loading="lazy" width="1200" height="800" alt="Комплект ${item.name}">
         <div>
           <span class="product-code">${item.fullName}</span>
           <h3>${item.name}</h3>
@@ -259,3 +259,34 @@ els.modeTabs.forEach((tab) => {
 [els.areaInput, els.stepInput, els.reserveInput, els.lengthInput].filter(Boolean).forEach((input) => {
   input.addEventListener("input", updateCalculator);
 });
+
+const requestForm = document.querySelector("#requestForm");
+
+if (requestForm) {
+  const requestStatus = requestForm.querySelector("[data-form-status]");
+
+  requestForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (!requestForm.reportValidity()) return;
+
+    const data = new FormData(requestForm);
+    const name = String(data.get("name") || "").trim();
+    const contact = String(data.get("contact") || "").trim();
+    const request = String(data.get("request") || "").trim();
+    const subject = "Запрос КП на КДБС";
+    const body = [
+      "Здравствуйте.",
+      "Нужен подбор и коммерческое предложение на КДБС.",
+      `Имя: ${name}`,
+      `Контакт: ${contact}`,
+      `Задача: ${request}`
+    ].join("\n");
+
+    if (requestStatus) {
+      requestStatus.textContent = "Открываем почтовую программу. Если она не настроена, отправьте запрос на head-s@yandex.ru.";
+    }
+
+    window.location.href = `mailto:head-s@yandex.ru?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+}

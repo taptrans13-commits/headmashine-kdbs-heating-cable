@@ -1,0 +1,9 @@
+{
+  "name": "headmashine-kdbs-heating-cable",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "audit": "node scripts/site-audit.mjs",
+    "check": "node --check app.js && node --check consent.js && node scripts/site-audit.mjs"
+  }
+}
